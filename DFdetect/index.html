@@ -10,8 +10,7 @@
   <meta content="deepfake, detection, AI, image analysis" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -23,386 +22,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.4/css/boxicons.min.css" rel="stylesheet">
 
   <!-- Main CSS File -->
-  <style>
-    /*--------------------------------------------------------------
-    # General
-    --------------------------------------------------------------*/
-    body {
-      font-family: "Open Sans", sans-serif;
-      color: #585a61;
-    }
-
-    a {
-      color: #5777ba;
-      text-decoration: none;
-    }
-
-    a:hover {
-      color: #7b94c9;
-      text-decoration: none;
-    }
-
-    h1, h2, h3, h4, h5, h6 {
-      font-family: "Raleway", sans-serif;
-    }
-
-    /*--------------------------------------------------------------
-    # Header
-    --------------------------------------------------------------*/
-    #header {
-      transition: all 0.5s;
-      z-index: 997;
-      transition: all 0.5s;
-      padding: 15px 0;
-      background: rgba(255, 255, 255, 0.95);
-    }
-
-    #header .logo h1 {
-      font-size: 30px;
-      margin: 0;
-      padding: 6px 0;
-      line-height: 1;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-
-    #header .logo h1 a, #header .logo h1 a:hover {
-      color: #5777ba;
-      text-decoration: none;
-    }
-
-    #header .logo img {
-      padding: 6px 0;
-      margin: 0;
-      max-height: 40px;
-    }
-
-    /*--------------------------------------------------------------
-    # Navigation
-    --------------------------------------------------------------*/
-    .navbar {
-      width: 100%;
-    }
-
-    .navbar-container {
-      margin: 0 auto;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      padding: 10px 0;
-      width: 100%;
-    }
-
-    .navbar-toggle {
-      display: none;
-      font-size: 24px;
-      color: #5777ba;
-      border: none;
-      background: transparent;
-      cursor: pointer;
-    }
-
-    .navbar-menu {
-      display: block;
-      width: auto;
-    }
-
-    .navbar-list {
-      display: flex;
-      flex-direction: row;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    .navbar-item {
-      position: relative;
-      white-space: nowrap;
-      padding: 8px 0 8px 25px;
-    }
-
-    .navbar-link {
-      display: block;
-      position: relative;
-      color: #47536e;
-      padding: 0;
-      transition: 0.3s;
-      font-size: 15px;
-      font-family: "Open Sans", sans-serif;
-      font-weight: 600;
-    }
-
-    .navbar-link:hover, .navbar-link.active {
-      color: #5777ba;
-      text-decoration: none;
-    }
-
-    @media (max-width: 991px) {
-      .navbar-toggle {
-        display: block;
-      }
-
-      .navbar-menu {
-        display: none;
-        width: 100%;
-        margin-top: 15px;
-        background: #fff;
-        border-radius: 8px;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-        overflow: hidden;
-      }
-
-      .navbar-menu.active {
-        display: block;
-      }
-
-      .navbar-list {
-        flex-direction: column;
-        padding: 10px;
-      }
-
-      .navbar-item {
-        padding: 10px 15px;
-        border-bottom: 1px solid #eee;
-      }
-
-      .navbar-item:last-child {
-        border-bottom: none;
-      }
-    }
-
-    /*--------------------------------------------------------------
-    # Hero Section
-    --------------------------------------------------------------*/
-    #hero {
-      width: 100%;
-      position: relative;
-      overflow: hidden;
-      padding: 140px 0 100px 0;
-      margin-bottom: -75px;
-    }
-
-    #hero::before {
-      content: '';
-      position: absolute;
-      right: -100%;
-      top: 20%;
-      width: 250%;
-      height: 200%;
-      z-index: -1;
-      background-color: #e8ecf5;
-      transform: skewY(135deg);
-    }
-
-    #hero h1 {
-      margin: 0 0 10px 0;
-      font-size: 48px;
-      font-weight: 500;
-      line-height: 56px;
-      color: #5777ba;
-      font-family: "Poppins", sans-serif;
-    }
-
-    #hero h2 {
-      color: #515f7d;
-      margin-bottom: 50px;
-      font-size: 20px;
-    }
-
-    #hero .hero-img {
-      text-align: center;
-    }
-
-    #hero .hero-img img {
-      width: 70%;
-    }
-
-    @media (max-width: 991px) {
-      #hero {
-        text-align: center;
-        padding-top: 80px;
-      }
-      #hero .hero-img img {
-        width: 80%;
-      }
-    }
-
-    @media (max-width: 768px) {
-      #hero {
-        text-align: center;
-      }
-      #hero h1 {
-        font-size: 28px;
-        line-height: 36px;
-      }
-      #hero h2 {
-        font-size: 18px;
-        line-height: 24px;
-        margin-bottom: 30px;
-      }
-      #hero .hero-img img {
-        width: 100%;
-      }
-    }
-
-    /*--------------------------------------------------------------
-    # Upload Section
-    --------------------------------------------------------------*/
-    .hidden {
-            display: none;
-        }
-        
-    .upload-area {
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
-      padding: 30px;
-      margin-bottom: 30px;
-    }
-
-    .upload-area h3 {
-      font-size: 20px;
-      font-weight: 600;
-      color: #5777ba;
-      margin-bottom: 20px;
-    }
-
-    .upload-box {
-      border: 2px dashed #d3d7da;
-      border-radius: 5px;
-      padding: 50px 20px;
-      text-align: center;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    .upload-box:hover {
-      border-color: #5777ba;
-    }
-
-    .upload-box i {
-      font-size: 50px;
-      color: #5777ba;
-      margin-bottom: 15px;
-    }
-
-    .upload-box p {
-      margin-bottom: 0;
-    }
-
-    .result-area {
-      display: none;
-      margin-top: 30px;
-    }
-
-    .result-img {
-      max-width: 100%;
-      border-radius: 5px;
-      margin-bottom: 20px;
-    }
-
-    .progress-wrapper {
-      margin: 20px 0;
-    }
-
-    /*--------------------------------------------------------------
-    # Features
-    --------------------------------------------------------------*/
-    .features .icon-box {
-      padding: 30px;
-      position: relative;
-      overflow: hidden;
-      background: #fff;
-      box-shadow: 0 0 29px 0 rgba(18, 66, 101, 0.08);
-      transition: all 0.3s ease-in-out;
-      border-radius: 8px;
-      z-index: 1;
-      height: 100%;
-    }
-
-    .features .icon-box .title {
-      font-weight: 700;
-      margin-bottom: 15px;
-      font-size: 18px;
-    }
-
-    .features .icon-box .title a {
-      color: #124265;
-      transition: 0.3s;
-    }
-
-    .features .icon-box .icon {
-      margin-bottom: 20px;
-      padding-top: 10px;
-      display: inline-block;
-      transition: all 0.3s ease-in-out;
-      font-size: 36px;
-      line-height: 1;
-      color: #5777ba;
-    }
-
-    .features .icon-box:hover {
-      transform: scale(1.08);
-    }
-
-    .features .icon-box:hover .title a {
-      color: #5777ba;
-    }
-
-    /*--------------------------------------------------------------
-    # Footer
-    --------------------------------------------------------------*/
-    #footer {
-      background: #fff;
-      padding: 0 0 30px 0;
-      color: #444444;
-      font-size: 14px;
-      background: #f6f9fd;
-    }
-
-    #footer .footer-top {
-      padding: 60px 0 30px 0;
-      background: #fff;
-    }
-
-    #footer .footer-top .footer-info {
-      margin-bottom: 30px;
-    }
-
-    #footer .footer-top .footer-info h3 {
-      font-size: 24px;
-      margin: 0 0 20px 0;
-      padding: 2px 0 2px 0;
-      line-height: 1;
-      font-weight: 700;
-      color: #5777ba;
-    }
-
-    #footer .copyright {
-      text-align: center;
-      padding-top: 30px;
-    }
-
-    /* Button Styles */
-    .btn-get-started {
-      background: #5777ba;
-      border: none;
-      border-radius: 4px;
-      color: #fff;
-      padding: 10px 30px;
-      transition: 0.5s;
-      display: inline-block;
-      margin-top: 15px;
-    }
-
-    .btn-get-started:hover {
-      background: #748ec6;
-      color: #fff;
-      text-decoration: none;
-    }
-  </style>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
@@ -416,7 +36,7 @@
           </div>
 
           <button class="navbar-toggle" id="navbar-toggle">
-            <i class="bi bi-list"></i>
+            <a href="#" class="bi bi-list"></a>
           </button>
 
           <div class="navbar-menu" id="navbar-menu">
@@ -451,7 +71,7 @@
       <div class="row">
         <div class="col-lg-6 d-lg-flex flex-lg-column justify-content-center align-items-stretch pt-5 pt-lg-0 order-2 order-lg-1" data-aos="fade-up">
           <div>
-            <h1>Detect Deepfakes with Advanced AI</h1>
+            <h1>Welcome To DEEPDETECT </h1>
             <button  id="toggleButton" class="btn-get-started">Start Analyzing</button>
           </div>
         </div>
@@ -654,7 +274,8 @@
                 <div class="info-box">
                   <i class="bi bi-geo-alt"></i>
                   <h3>Our Address</h3>
-                  <p>123 AI Boulevard, Tech City, CA 94103</p>
+                  <p>3156 university avenue,<br> 
+                    palo alto, ca 94301-1605</p>
                 </div>
               </div>
               <div class="col-md-6">
@@ -668,7 +289,7 @@
                 <div class="info-box mt-4">
                   <i class="bi bi-telephone"></i>
                   <h3>Call Us</h3>
-                  <p>+1 234 567 8900<br>+1 234 567 8901</p>
+                  <p>+1 650-543-4800<br>+1 650-543-4800</p>
                 </div>
               </div>
             </div>
@@ -716,10 +337,12 @@
           <div class="col-lg-3 col-md-6 footer-contact">
             <h3>DeepDetect</h3>
             <p>
-              123 AI Boulevard <br>
-              Tech City, CA 94103<br>
+              Silicon Valley, <br>
+              3156 university avenue,<br> 
+              palo alto, ca<br>
               United States <br><br>
-              <strong>Phone:</strong> +1 234 567 8900<br>
+              <strong>Phone:</strong> +1 650-543-4800<br>
+              <strong>Fax:</strong> +1 650-543-4801<br>
               <strong>Email:</strong> info@deepdetect.com<br>
             </p>
           </div>
@@ -750,10 +373,10 @@
             <h4>Our Social Networks</h4>
             <p>Follow us on social media for updates and news about deepfake detection</p>
             <div class="social-links mt-3">
-              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              <a href="" class="https://x.com/k7ishn"><i class="bx bxl-twitter"></i></a>
+              <a href="https://www.facebook.com/profile.php?id=61559732801269" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="https://www.instagram.com/k7ishn/" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/harsh-patel-6005b3275/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
             </div>
           </div>
 
@@ -763,179 +386,17 @@
 
     <div class="container py-4">
       <div class="copyright">
-        &copy; Copyright <strong><span>DeepDetect</span></strong>. All Rights Reserved
+        <strong><span>DeepDetect &copy;2025</span></strong>. All Right Reserved <br>
+        Designed by <a href="https://www.linkedin.com/in/harsh-patel-6005b3275/">Harsh Patel</a>
       </div>
     </div>
   </footer><!-- End Footer -->
-
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
+  
   <!-- Vendor JS Files -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 
   <!-- Main JS File -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // Initialize AOS
-      AOS.init({
-        duration: 1000,
-        easing: "ease-in-out",
-        once: true,
-        mirror: false
-      });
-
-      // Upload functionality
-      const uploadBox = document.getElementById('upload-box');
-      const fileInput = document.getElementById('file-input');
-      const progressWrapper = document.querySelector('.progress-wrapper');
-      const progressBar = document.querySelector('.progress-bar');
-      const resultArea = document.getElementById('result-area');
-      const resultImg = document.getElementById('result-img');
-      const scoreValue = document.getElementById('score-value');
-      const scoreLabel = document.getElementById('score-label');
-      const detailsList = document.getElementById('detection-details-list');
-
-      // Click on upload box
-      uploadBox.addEventListener('click', () => {
-        fileInput.click();
-      });
-
-      // Drag and drop functionality
-      uploadBox.addEventListener('dragover', (e) => {
-        e.preventDefault();
-        uploadBox.style.borderColor = '#5777ba';
-      });
-
-      uploadBox.addEventListener('dragleave', () => {
-        uploadBox.style.borderColor = '#d3d7da';
-      });
-
-      uploadBox.addEventListener('drop', (e) => {
-        e.preventDefault();
-        uploadBox.style.borderColor = '#d3d7da';
-        if (e.dataTransfer.files.length) {
-          handleFile(e.dataTransfer.files[0]);
-        }
-      });
-
-      // File input change
-      fileInput.addEventListener('change', () => {
-        if (fileInput.files.length) {
-          handleFile(fileInput.files[0]);
-        }
-      });
-
-      function handleFile(file) {
-        if (!file.type.match('image.*')) {
-          alert('Please upload an image file');
-          return;
-        }
-
-        // Display selected image
-        const reader = new FileReader();
-        reader.onload = function(e) {
-          // Show progress
-          progressWrapper.style.display = 'block';
-          resultArea.style.display = 'none';
-          
-          // Simulate progress
-          simulateProgress(e.target.result);
-        }
-        reader.readAsDataURL(file);
-      }
-
-      function simulateProgress(imgSrc) {
-        let progress = 0;
-        const interval = setInterval(() => {
-          progress += 5;
-          progressBar.style.width = progress + '%';
-          
-          if (progress >= 100) {
-            clearInterval(interval);
-            setTimeout(() => {
-              showResults(imgSrc);
-            }, 500);
-          }
-        }, 100);
-      }
-
-      function showResults(imgSrc) {
-        // Hide progress and show results
-        progressWrapper.style.display = 'none';
-        resultArea.style.display = 'block';
-        
-        // Set image
-        resultImg.src = imgSrc;
-        
-        // Set random score (in real app, this would come from your API)
-        const score = Math.floor(Math.random() * 100);
-        scoreValue.textContent = score + '%';
-        
-        // Set label based on score
-        if (score < 30) {
-          scoreLabel.textContent = 'Likely genuine';
-          scoreLabel.style.color = 'green';
-        } else if (score < 70) {
-          scoreLabel.textContent = 'Possibly manipulated';
-          scoreLabel.style.color = 'orange';
-        } else {
-          scoreLabel.textContent = 'Likely deepfake';
-          scoreLabel.style.color = 'red';
-        }
-        
-        // Set details
-        detailsList.innerHTML = '';
-        const details = [
-          'Analysis completed in 2.3 seconds',
-          `Confidence score: ${score}%`,
-          'Method: Convolutional Neural Network analysis',
-          score > 50 ? 'Facial inconsistencies detected' : 'No facial inconsistencies detected',
-          score > 40 ? 'Unnatural lighting patterns found' : 'Lighting patterns appear natural',
-          score > 60 ? 'Texture abnormalities detected' : 'Texture analysis shows natural patterns'
-        ];
-        
-        details.forEach(detail => {
-          const li = document.createElement('li');
-          li.textContent = detail;
-          detailsList.appendChild(li);
-        });
-      }
-      document.getElementById('toggleButton').addEventListener('click', function() {
-        const div = document.getElementById('contentDiv');
-        const button = document.getElementById('toggleButton');
-        
-        if (div.classList.contains('hidden')) {
-          div.classList.remove('hidden');
-        } else {
-          div.classList.add('hidden');
-        }
-    });
-
-      // Smooth scrolling for links with hash
-      document.querySelectorAll('a.scrollto').forEach(link => {
-        link.addEventListener('click', function(e) {
-          if (document.querySelector(this.hash)) {
-            e.preventDefault();
-            
-            const navbar = document.querySelector('.navbar');
-            if (navbar.classList.contains('navbar-mobile')) {
-              navbar.classList.remove('navbar-mobile');
-              document.querySelector('.mobile-nav-toggle').classList.toggle('bi-list');
-              document.querySelector('.mobile-nav-toggle').classList.toggle('bi-x');
-            }
-            
-            const targetElement = document.querySelector(this.hash);
-            window.scrollTo({
-              top: targetElement.offsetTop,
-              behavior: 'smooth'
-            });
-          }
-        });
-      });
-    });
-  </script>
-
+  <script src="assets/js/main.js"></script>
 </body>
-
 </html>
