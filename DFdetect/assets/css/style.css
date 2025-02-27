@@ -20,6 +20,12 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
 }
 
+.deepdetect{
+  color: #5777ba; 
+  font-weight: 700; 
+  letter-spacing: 2px;
+}
+
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -69,8 +75,8 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
 }
 
-.navbar-toggle {
-  display: none;
+.navbar-toggler {
+ 
   font-size: 24px;
   color: #5777ba;
   border: none;
@@ -78,6 +84,12 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
 }
 
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+.navbar-collapse{
+  flex-grow: 0;
+}
 .navbar-menu {
   display: block;
   width: auto;
@@ -103,9 +115,35 @@ h1, h2, h3, h4, h5, h6 {
   color: #47536e;
   padding: 0;
   transition: 0.3s;
-  font-size: 15px;
+  font-size: 20px;
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
+  text-decoration: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  .navbar-link {
+    transition: none;
+  }
+}
+.navbar-link:hover, .navbar-link:focus {
+  color: var(--bs-navbar-link-hover-color);
+}
+.navbar-link.disabled {
+  color: var(--bs-navbar-link-disabled-color);
+  pointer-events: none;
+  cursor: default;
+}
+#mainNav.navbar-shrink {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+#mainNav.navbar-shrink .navbar-brand {
+  font-size: 1.25em;
+}
+#mainNav.navbar-shrink .navbar-brand svg,
+#mainNav.navbar-shrink .navbar-brand img {
+  height: 1.5rem;
 }
 
 .navbar-link:hover, .navbar-link.active {
@@ -363,7 +401,7 @@ h1, h2, h3, h4, h5, h6 {
 .btn-get-started {
   background: #5777ba;
   border: none;
-  border-radius: 4px;
+  border-radius: 15px;
   color: #fff;
   padding: 10px 30px;
   transition: 0.5s;
@@ -372,12 +410,39 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-get-started:hover {
-  background: #748ec6;
-  color: #fff;
+  background: #eaeaea;
+  color: #5777ba;
   text-decoration: none;
+}
+button.btn-get-started.scrollto {
+  background-color: white;
+  border-color: #5777ba;
+  color: #5777ba;
+  border-radius: 15px;
+  border: double;
+}
+button.btn-get-started.scrollto:hover {
+  background-color:  #5777ba;
+  color: white;
 }
 
 /* FAQ SECTION */
 .faq{
   margin-top: 20px;
+}
+
+
+/* HOVER CSS */
+.social-links{
+  font-size: 30px;
+}
+.social-links a{
+  transition: all .2s ease-in-out; 
+}
+.social-links a:hover{
+  transform: scale(1.1);
+}
+
+ul {
+  list-style-type: none;
 }
