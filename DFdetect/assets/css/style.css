@@ -446,3 +446,23 @@ button.btn-get-started.scrollto:hover {
 ul {
   list-style-type: none;
 }
+
+.features .icon-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px 0 rgba(0, 0, 0, .2), 0 4px 18px 0 rgba(0, 0, 0, .12);
+  
+  transition-duration: 0.3s;
+}
+
+[data-aos][data-aos][data-aos-delay="200"].aos-animate, body[data-aos-delay="200"] [data-aos].aos-animate {
+    transition-delay: 0ms;
+}
+[data-aos][data-aos][data-aos-duration="1000"], body[data-aos-duration="1000"] [data-aos] {
+  transition-duration: 0.3s;
+}
+[data-aos][data-aos][data-aos-delay="400"].aos-animate, body[data-aos-delay="400"] [data-aos].aos-animate {
+  transition-delay: 0ms;
+}
+[data-aos][data-aos][data-aos-delay="300"].aos-animate, body[data-aos-delay="300"] [data-aos].aos-animate {
+    transition-delay: 0ms;
+}
