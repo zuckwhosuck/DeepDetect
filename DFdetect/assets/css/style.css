@@ -36,6 +36,10 @@ h1, h2, h3, h4, h5, h6 {
   padding: 15px 0;
   background: rgba(255, 255, 255, 0.95);
 }
+.logo{
+  display: flex;
+  align-items: center;
+}
 
 #header .logo h1 {
   font-size: 30px;
@@ -228,7 +232,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero .hero-img img {
-  width: 70%;
+  width: 100%;
 }
 
 @media (max-width: 991px) {
@@ -363,6 +367,10 @@ h1, h2, h3, h4, h5, h6 {
   color: #5777ba;
 }
 
+
+.contact{
+  padding-top: 40px;
+}
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
@@ -426,15 +434,21 @@ button.btn-get-started.scrollto:hover {
   color: white;
 }
 
+.small-icon{
+  color: #5777ba;
+}
+
+
 /* FAQ SECTION */
 .faq{
-  margin-top: 20px;
+  padding-top: 40px;
 }
 
 
 /* HOVER CSS */
 .social-links{
   font-size: 30px;
+  column-gap: 7px;
 }
 .social-links a{
   transition: all .2s ease-in-out; 
@@ -466,3 +480,4 @@ ul {
 [data-aos][data-aos][data-aos-delay="300"].aos-animate, body[data-aos-delay="300"] [data-aos].aos-animate {
     transition-delay: 0ms;
 }
+

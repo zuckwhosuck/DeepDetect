@@ -133,6 +133,16 @@
           div.classList.add('hidden');
         }
     });
+    document.getElementById('toggleButton2').addEventListener('click', function() {
+      const div = document.getElementById('contentDiv');
+      const button = document.getElementById('toggleButton2');
+      
+      if (div.classList.contains('hidden')) {
+        div.classList.remove('hidden');
+      } else {
+        div.classList.add('hidden');
+      }
+  });
 
       // Smooth scrolling for links with hash
       document.querySelectorAll('a.scrollto').forEach(link => {
@@ -157,3 +167,14 @@
       });
     });
   
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const faqLink = document.getElementById("faq-link"); // The FAQ link in the header
+    const faqButton = document.getElementById("faq-question-1"); // First FAQ question button
+
+    faqLink.addEventListener("click", function (event) {
+      setTimeout(() => {
+        faqButton.click(); // Simulate a click on the first FAQ question button
+      }, 500); // Delay to allow smooth scrolling before clicking
+    });
+  });
