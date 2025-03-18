@@ -1,1 +1,1 @@
-# DeepDetect_2.0
+# DeepDetect
